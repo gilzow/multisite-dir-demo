@@ -108,6 +108,8 @@ define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
 // Disable WordPress from running automatic updates
 define( 'WP_AUTO_UPDATE_CORE', false );
 
+define('WP_ALLOW_MULTISITE', true);
+
 // Since you can have multiple installations in one database, you need a unique
 // prefix.
 $table_prefix  = 'wp_';
