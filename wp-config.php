@@ -108,7 +108,13 @@ define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
 // Disable WordPress from running automatic updates
 define( 'WP_AUTO_UPDATE_CORE', false );
 
-define('WP_ALLOW_MULTISITE', true);
+define('WP_ALLOW_MULTISITE', true); //enables the Network setting panel in Tools
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false); // does the instance contain subdirectory sites (false) or subdomain sites (true)
+define('DOMAIN_CURRENT_SITE', $site_host); //the current domain being requested
+define('PATH_CURRENT_SITE', '/'); //path to the WordPress site if it isnt the root of the site (e.g. https://foo.com/blog/)
+define('SITE_ID_CURRENT_SITE', 1); //main/primary site ID
+define('BLOG_ID_CURRENT_SITE', 1); //main/primary/parent blog ID
 
 // Since you can have multiple installations in one database, you need a unique
 // prefix.
