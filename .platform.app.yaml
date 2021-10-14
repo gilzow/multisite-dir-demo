@@ -66,16 +66,16 @@ web:
                 '^/(?!wordpress/)([_0-9a-zA-Z-]+/)?wp-(?<wproot>[a-z\-]+).php$':
                   allow: true
                   scripts: true
-                  passthru: '/wordpress/wp-$wproot.php'
+                  passthru: 'wordpress/wp-$wproot.php'
               # Allows directory-based multisites to still access the wp-admin and wp-include locations
                 '^/(?!wordpress/)([_0-9a-zA-Z-]+/)?(?<adminrewrite>wp-(admin|includes).*)':
                   allow: true
                   scripts: true
-                  passthru: '/wordpress/$adminrewrite'
+                  passthru: 'wordpress/$adminrewrite'
                 '^/([_0-9a-zA-Z-]+)/wp-content/(?<content>.*)':
                   allow: true
                   scripts: false
-                  passthru: '/wp-content/$content'
+                  passthru: 'wp-content/$content'
                   expires: 1w
 
         "/wp-content/cache":
