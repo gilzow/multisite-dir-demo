@@ -1,0 +1,9 @@
+name: multisite-dir-demo
+recipe: platformsh
+config:
+  id: x2uapu3x4o234
+
+proxy:
+  bvdr:
+    - fii.lndo.site
+    - bii.lndo.site

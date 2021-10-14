@@ -5,7 +5,7 @@
 
 "https://{default}/":
     type: upstream
-    upstream: "app:http"
+    upstream: "bvdr:http"
     cache:
         enabled: true
         # Base the cache on the session cookies. Ignore all other cookies.
@@ -19,3 +19,11 @@
 "https://www.{default}/":
     type: redirect
     to: "https://{default}/"
+
+"https://foobar.biz/":
+    type: upstream
+    upstream: "bvdr:http"
+
+"https://barfoo.biz/":
+    type: upstream
+    upstream: "bvdr:http"
